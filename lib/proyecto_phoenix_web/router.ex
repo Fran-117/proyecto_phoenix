@@ -18,6 +18,7 @@ defmodule ProyectoPhoenixWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/funciona", FuncionaController, :funciona
   end
 
   # Other scopes may use custom stacks.
