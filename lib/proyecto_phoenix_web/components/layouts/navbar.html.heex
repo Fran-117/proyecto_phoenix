@@ -1,43 +1,47 @@
-<header class="fixed top-0 z-50 w-full border-b border-cyan-900 bg-slate-950/80 backdrop-blur-md">
+<header class="fixed top-0 z-50 w-full border-b border-blue-700 bg-black shadow-lg">
     <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
       
       <div class="flex items-center gap-4">
-        <div 
-          class="flex h-10 w-10 items-center justify-center bg-slate-900 shadow-[0_0_10px_rgba(6,182,212,0.2)]" 
-          style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); border: 1px solid #06b6d4;">
-          <span class="font-mono text-sm font-bold tracking-widest text-cyan-400">FA</span>
+        <div class="relative flex h-12 w-12 shrink-0 items-center justify-center">
+            <img 
+            src="/images/SalvaBank (Editado).jpeg" 
+            alt="Logo SalvaBank" 
+            class="h-full w-full object-contain p-1.5" />
         </div>
-        <span class="font-mono text-xl font-semibold tracking-tight text-slate-200">
-          FRANCISCO<span class="text-cyan-500">ÁVILA</span>
-        </span>
+        <div class="flex flex-col gap-0.5 font-mono leading-tight">
+            <span class="text-lg font-bold tracking-tight text-white sm:text-xl">SalvaBank</span>
+            <span class="text-[11px] font-medium tracking-normal text-grey-950">La forma de cuidar</span>
+        </div>
       </div>
 
       <nav class="hidden md:block">
-        <ul class="flex items-center space-x-8 font-mono text-sm text-slate-400">
+        <ul class="flex items-center space-x-8 font-mono text-sm text-blue-100">
           <li>
-            <a href="/" class="transition-colors hover:text-cyan-400">~/inicio</a>
+            <a href="/" class="transition-colors hover:text-white">~/inicio</a>
           </li>
           <li>
-            <a href="/proyectos" class="transition-colors hover:text-cyan-400">~/proyectos</a>
+            <a href="/funciona" class="transition-colors hover:text-white">Vamos a funciona</a>
           </li>
           <li>
-            <a href="/stack" class="transition-colors hover:text-cyan-400">~/stack</a>
-          </li>
-          <li>
-            <a href="/contacto" class="border border-cyan-500/50 bg-cyan-950/30 px-4 py-2 text-cyan-400 transition-all hover:bg-cyan-900/60 hover:shadow-[0_0_15px_rgba(6,182,212,0.4)]">
-                [ Conectar ]
+            <a href="/contacto" class="border border-white/40 bg-blue-950 px-4 py-2 text-white transition-all hover:bg-blue-900 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                Iniciar Sesión
             </a>
-        </li>
+          </li>
+          <li>
+            <a href="/contacto" class="border border-white/40 bg-blue-950 px-4 py-2 text-white transition-all hover:bg-blue-900 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                Registrarse
+            </a>
+          </li>
         </ul>
-    </nav>
+      </nav>
 
-    <div class="md:hidden">
-        <button type="button" class="text-cyan-400 hover:text-cyan-300">
+      <div class="md:hidden">
+        <button type="button" class="text-blue-100 hover:text-white">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
-    </div>
+      </div>
 
     </div>
 </header>
