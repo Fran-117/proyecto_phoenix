@@ -2,10 +2,11 @@ import Config
 
 # Configure your database
 config :proyecto_phoenix, ProyectoPhoenix.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "proyecto_phoenix_dev",
+  username: "postgres.bixngxzexhmrlyaqvvje",
+  password: System.get_env("SUPABASE_DB_PASSWORD"),
+  hostname: System.get_env("SUPABASE_DB_HOST"),
+  database: "postgres",
+  port: 6543,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
