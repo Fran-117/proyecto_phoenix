@@ -68,7 +68,7 @@ defmodule ProyectoPhoenixWeb.UserLive.Registration do
           socket
           |> put_flash(
             :info,
-            "An email was sent to #{user.email}, please access it to confirm your account."
+            "Entra en el apartado 'Vamos al email' para confirmar tu cuenta."
           )
           |> push_navigate(to: ~p"/users/log-in")}
 

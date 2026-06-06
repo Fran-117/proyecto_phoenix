@@ -29,6 +29,9 @@
                 <%= @current_scope.user.email %>
               </span>
 
+            <.link href={~p"/users/settings"} class="text-white mr-4">
+              Configuración
+            </.link>
             <.link href={~p"/users/log-out"} method="delete" class="text-white font-semibold">
               Cerrar sesión
             </.link>
