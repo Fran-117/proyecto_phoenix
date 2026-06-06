@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,9 +29,9 @@
     </script>
   </head>
   <body>
-    <.navbar />
+    <.navbar current_scope={assigns[:current_scope]} />
 
-<div class="h-16"></div>
+
     {@inner_content}
   </body>
 </html>

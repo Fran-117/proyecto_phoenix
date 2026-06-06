@@ -26,11 +26,11 @@ defmodule ProyectoPhoenixWeb.UserLive.Confirmation do
             name={@form[:remember_me].name}
             value="true"
             phx-disable-with="Confirming..."
-            class="btn btn-primary w-full"
+            class="bg-black text-white hover:bg-zinc-800 border-none w-full"
           >
             Confirmar y mantener la sesión iniciada en este dispositivo
           </.button>
-          <.button phx-disable-with="Confirming..." class="btn btn-primary btn-soft w-full mt-2">
+          <.button phx-disable-with="Confirming..." class="bbg-black text-black hover:bg-zinc-800 border-none w-full mt-2">
             Confirmar y iniciar sesión solo esta vez
           </.button>
         </.form>
@@ -46,7 +46,7 @@ defmodule ProyectoPhoenixWeb.UserLive.Confirmation do
         >
           <input type="hidden" name={@form[:token].name} value={@form[:token].value} />
           <%= if @current_scope do %>
-            <.button phx-disable-with="Logging in..." class="btn btn-primary w-full">
+            <.button phx-disable-with="Logging in..." class="bg-black text-white hover:bg-zinc-800 border-none w-full">
               Iniciar sesión
             </.button>
           <% else %>
@@ -58,7 +58,7 @@ defmodule ProyectoPhoenixWeb.UserLive.Confirmation do
             >
               Mantenerme conectado en este dispositivo
             </.button>
-            <.button phx-disable-with="Logging in..." class="btn btn-primary btn-soft w-full mt-2">
+            <.button phx-disable-with="Logging in..." class="bg-black text-white hover:bg-zinc-800 border-none w-full mt-2">
               Iniciar sesión solo esta vez
             </.button>
           <% end %>

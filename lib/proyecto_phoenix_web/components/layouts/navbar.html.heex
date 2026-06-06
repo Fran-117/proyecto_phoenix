@@ -17,22 +17,32 @@
       <nav class="hidden md:block">
         <ul class="flex items-center space-x-8 font-mono text-sm text-blue-100">
           <li>
-            <a href="/" class="transition-colors hover:text-white">~/inicio</a>
+            <a href="/" class="transition-colors hover:text-white">Inicio</a>
           </li>
           <li>
-            <a href="/funciona" class="transition-colors hover:text-white">Vamos a funciona</a>
+            <a href="/dev/mailbox" class="transition-colors hover:text-white">Vamos al email</a>
           </li>
+
           <li>
-            <a href="/contacto" class="border border-white/40 bg-blue-950 px-4 py-2 text-white transition-all hover:bg-blue-900 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                Iniciar Sesión
-            </a>
+            <%= if assigns[:current_scope] && assigns[:current_scope].user do %>
+              <span class="text-black font-mono mr-4">
+                <%= @current_scope.user.email %>
+              </span>
+
+            <.link href={~p"/users/log-out"} method="delete" class="text-white font-semibold">
+              Cerrar sesión
+            </.link>
+
+          <% else %>
+            <.link href={~p"/users/log-in"} class="text-white mr-4">
+              Iniciar sesión
+            </.link>
+            <.link href={~p"/users/register"} class="text-white font-semibold">
+              Registrarse
+            </.link>
+          <% end %>
           </li>
-          <li>
-            <a href="/contacto" class="border border-white/40 bg-blue-950 px-4 py-2 text-white transition-all hover:bg-blue-900 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                Registrarse
-            </a>
-          </li>
-        </ul>
+          </ul>
       </nav>
 
       <div class="md:hidden">

@@ -52,7 +52,7 @@ defmodule ProyectoPhoenixWeb.UserLive.Login do
             required
             phx-mounted={JS.focus()}
           />
-          <.button class="btn btn-primary w-full">
+          <.button class="bbg-white text-black hover:bg-zinc-800 border-none w-full">
             Log in with email <span aria-hidden="true">→</span>
           </.button>
         </.form>
@@ -83,10 +83,10 @@ defmodule ProyectoPhoenixWeb.UserLive.Login do
             autocomplete="current-password"
             spellcheck="false"
           />
-          <.button class="btn btn-primary w-full" name={@form[:remember_me].name} value="true">
+          <.button class="bbg-white text-black hover:bg-zinc-800 border-none" name={@form[:remember_me].name} value="true">
             Iniciar sesión y permanecer conectado <span aria-hidden="true">→</span>
           </.button>
-          <.button class="btn btn-primary btn-soft w-full mt-2">
+          <.button class="bbg-white text-black hover:bg-zinc-800 border-none w-full" name={@form[:remember_me].name} value="false">
             Iniciar sesión solo esta vez
           </.button>
         </.form>

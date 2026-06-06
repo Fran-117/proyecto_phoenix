@@ -101,7 +101,10 @@ defmodule ProyectoPhoenixWeb.CoreComponents do
   slot :inner_block, required: true
 
   def button(%{rest: rest} = assigns) do
-    variants = %{"primary" => "btn-primary", nil => "btn-primary btn-soft"}
+    variants = %{
+      "primary" => "bg-black text-white hover:bg-zinc-800 border-none",
+      nil => "bg-black text-white hover:bg-zinc-800 border-none"
+    }
 
     assigns =
       assign_new(assigns, :class, fn ->

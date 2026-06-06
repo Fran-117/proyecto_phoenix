@@ -33,7 +33,7 @@ defmodule ProyectoPhoenixWeb.UserLive.Registration do
             phx-mounted={JS.focus()}
           />
 
-          <.button phx-disable-with="Creating account..." class="btn btn-primary w-full">
+          <.button phx-disable-with="Creating account..." class="bg-black text-white hover:bg-zinc-800 border-none w-full">
             Crear una cuenta.
           </.button>
         </.form>
@@ -65,12 +65,12 @@ defmodule ProyectoPhoenixWeb.UserLive.Registration do
           )
 
         {:noreply,
-         socket
-         |> put_flash(
-           :info,
-           "An email was sent to #{user.email}, please access it to confirm your account."
-         )
-         |> push_navigate(to: ~p"/users/log-in")}
+          socket
+          |> put_flash(
+            :info,
+            "An email was sent to #{user.email}, please access it to confirm your account."
+          )
+          |> push_navigate(to: ~p"/users/log-in")}
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign_form(socket, changeset)}
